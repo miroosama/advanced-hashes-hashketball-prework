@@ -118,9 +118,12 @@ def game_hash
   }
 end
 
+def shoe_size(name)
+  player = find_the_player(name)
+  player.fetch(:shoe)
+end
 
-
-  def num_points_scored(name)
+def num_points_scored(name)
   player = find_the_player(name)
   player.fetch(:points)
 end
