@@ -120,9 +120,8 @@ end
 
 
 def num_points_scored
-  game_hash[:player_name].each do |key, value|
-    if key == "points"
-      value
-    end
-  end
+  def num_points_scored(name)
+  player = find_the_player(name)
+  player.fetch(:points)
 end
+  
